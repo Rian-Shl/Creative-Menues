@@ -17,15 +17,20 @@ ul {
     flex-wrap: wrap;
 }
 
-ul.growing-borders li {
+ul li {
     list-style: none;
 }
 
-ul.growing-borders li a {
+ul li a {
     text-decoration: none;
-    color: #3d3d3d;
     font-size: 1rem;
     display: block;
+}
+
+/* Grwoing-Borders */
+ul.growing-borders li a {
+    color: #3d3d3d;
+    font-size: 1rem;
     padding: 10px 15px;
     position: relative;
 }
@@ -61,3 +66,56 @@ ul.growing-borders li a:after {
     transform-origin: right;
 }
 
+/* Background-Border */
+
+ul.background-border li a {
+    color: #3d3d3d;
+    font-size: 1rem;
+    padding: 5px 10px;
+    margin: 0px 15px ;
+    position: relative;
+    transition: all 0.5s;
+}
+
+ul.background-border li a:before {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 12px;
+    height: 12px;
+    border: 3px solid #e91e63;
+    border-width: 0 0 3px 3px;
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+ul.background-border li a:after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 12px;
+    height: 12px;
+    border: 3px solid #e91e63;
+    border-width: 3px 3px 0 0;
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+ul.background-border li a:hover:before {
+    opacity: 1;
+    left: -5px;
+    bottom: -5px;
+}
+
+ ul.background-border li a:hover:after {
+    opacity: 1;
+    right: -5px;
+    top: -5px;
+ }
+
+ ul.background-border li a:hover {
+    background-color: #e91e63;
+    color: #fff;
+ }
