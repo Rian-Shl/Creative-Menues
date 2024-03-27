@@ -119,3 +119,48 @@ ul.background-border li a:hover:before {
     background-color: #e91e63;
     color: #fff;
  }
+
+
+ /* Splitted-Backgound */
+ ul.splitted-background li a {
+    color: #262626;
+    font-size: 1rem;
+    line-height: 2rem;
+    text-align: center;
+    height: 2rem;
+    width: 100px;
+    position: relative;
+    transition: all 0.5s;
+}
+ul.splitted-background li a:hover {
+    color: #fff;
+
+}
+ul.splitted-background li span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: #262626;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    transform: scaleY(0);
+    transition: all 0.5s;
+    transform-origin: top;
+}
+ul.splitted-background li span:nth-child(2) {
+    left: 25%;
+    transition-delay: 0.15s;
+}
+ul.splitted-background li span:nth-child(3) {
+    left: 50%;
+    transition-delay: 0.3s;
+}
+ul.splitted-background li span:last-child {
+    left: 75%;
+    transition-delay: 0.45s;
+}
+
+ul.splitted-background li a:hover span{
+    transform: scaleY(1);
+}
