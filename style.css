@@ -27,7 +27,7 @@ ul li a {
     display: block;
 }
 
-/* Grwoing-Borders */
+/* grwoing-borders */
 ul.growing-borders li a {
     color: #3d3d3d;
     font-size: 1rem;
@@ -66,7 +66,7 @@ ul.growing-borders li a:after {
     transform-origin: right;
 }
 
-/* Background-Border */
+/* background-border */
 
 ul.background-border li a {
     color: #3d3d3d;
@@ -121,7 +121,7 @@ ul.background-border li a:hover:before {
  }
 
 
- /* Splitted-Backgound */
+ /* splitted-sackgound */
  ul.splitted-background li a {
     color: #262626;
     font-size: 1rem;
@@ -163,4 +163,46 @@ ul.splitted-background li span:last-child {
 
 ul.splitted-background li a:hover span{
     transform: scaleY(1);
+}
+
+
+/*  moving-bottom-borders */
+ul.moving-bottom-borders li {
+    padding: 10px 20px;
+}
+
+ul.moving-bottom-borders li a {
+    color: #222;
+    position: relative;
+}
+
+ul.moving-bottom-borders li a:before {
+    content: '';
+    width: 0px;
+    height: 3px;
+    background-color: #00bcd4;
+    position: absolute;
+    top: 120%;
+    left: 0;
+    transition: all 0.5s;
+}
+ul.moving-bottom-borders li a:after {
+    content: '';
+    width: 0px;
+    height: 3px;
+    background-color: #f0f;
+    position: absolute;
+    top: 120%;
+    right: 0;
+    transition: all 0.5s;
+}
+
+
+ul.moving-bottom-borders li a:hover:before {
+    width: 50%;
+    transform: translateX(100%);
+}
+ul.moving-bottom-borders li a:hover:after {
+    width: 50%;
+    transform: translateX(-100%);
 }
