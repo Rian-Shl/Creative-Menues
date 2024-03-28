@@ -7,7 +7,7 @@ body {
     gap: 5rem;
     flex-wrap: wrap;
     margin: 5rem;
-    max-height: 50vh;
+    max-height: 100vh;
 }
 
 ul {
@@ -206,3 +206,53 @@ ul.moving-bottom-borders li a:hover:after {
     width: 50%;
     transform: translateX(-100%);
 }
+
+/* blury-effect */
+
+ul.blury-effect li {
+    margin: 0px 20px; 
+    transition: all 0.5s;
+}
+
+ul.blury-effect li a {
+    padding: 5px;
+    color: #222;
+    position: relative;
+    transition: all 0.5s;
+}
+ul.blury-effect:hover a {
+    opacity: 0.4;
+    filter: blur(3px);
+}
+ul.blury-effect a:hover {
+    opacity: 1;
+    filter: none;
+}
+
+ul.blury-effect a:hover {
+    transform: scale(1.4);
+}
+
+ul.blury-effect li:hover a {
+    color: #fff
+} 
+
+ul.blury-effect li a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f36f3f;
+    border-radius: 4px;
+    transition:0.3s;
+    transform: scale(0);
+    z-index:-1
+}
+
+ul.blury-effect li:hover a:before{
+    transform: scale(1);
+}
+
+
