@@ -474,3 +474,51 @@ ul.cursor-animation li a:before {
 ul.cursor-animation li a:hover:before{
      width: 100%; 
 }
+
+
+/* fading-menu */
+div.fading-menu {
+    background-color: #333;
+    padding: 50px;
+    
+}
+div.fading-menu ul li a{
+    position: relative;
+    font-family: 'Raleway', Arial, sans-serif;
+    display: block;
+    text-align: center;
+    font-weight: 900;
+    transition: 0.5s;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    color: #fff;
+    margin: 0 20px;
+    transition-delay: 0.5s;
+}
+
+div.fading-menu ul li a:hover{
+    color: #ffffff10;
+    transition-delay: 0s;
+}
+
+div.fading-menu ul li a:before {
+    content: attr(data-text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #3bffa7;
+    font-size: 0.8rem;
+    letter-spacing: 15px;
+    text-shadow: 0 0 10px #3bffe8,  0 0 30px #3bffe8, 0 0 50px #3bffe8;
+    font-weight: 500;
+    transition: 0.5s;
+    opacity: 0;
+    transition-delay: 0s;
+}
+
+div.fading-menu ul li:hover a:before {
+    opacity: 1;
+    letter-spacing: 2px;
+    transition-delay: 0.5s;
+}
